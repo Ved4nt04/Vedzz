@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kissan Jam & Rikshaw Gallery</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#fff0f0,#f4f4f4);
+      color:#222;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header{
+      width:100%;
+      text-align:center;
+      background:#ff5a5f;
+      color:white;
+      padding:20px 0;
+      font-size:1.8rem;
+      font-weight:bold;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+    main{
+      width:90%;
+      max-width:900px;
+      margin-top:30px;
+      display:grid;
+      gap:30px;
+    }
+    section{
+      background:white;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      overflow:hidden;
+      transition:transform 0.3s;
+    }
+    section:hover{transform:translateY(-5px);}
+    img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .content{
+      padding:20px;
+    }
+    h2{
+      color:#ff5a5f;
+      margin-bottom:10px;
+    }
+    p{
+      color:#555;
+      line-height:1.5;
+    }
+    footer{
+      margin-top:40px;
+      text-align:center;
+      color:#888;
+      font-size:0.9rem;
+      padding:20px 0;
+    }
+    @media (max-width:600px){
+      header{font-size:1.5rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>Kissan Jam & Rikshaw Gallery</header>
+  <main>
+    <!-- Kissan Jam Section -->
+    <section>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Kissan_Mixed_Fruit_Jam_500g.jpg" alt="Kissan Jam Jar">
+      <div class="content">
+        <h2>Kissan Jam</h2>
+        <p>
+          Kissan Jam is a popular fruit jam brand loved across India. Known for its sweet and tangy mixed fruit flavor,
+          it’s a breakfast favorite — perfect on bread, rotis, or even as a dessert topping.
+        </p>
+      </div>
+    </section>
+
+    <!-- Rikshaw Section -->
+    <section>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Indian_auto_rickshaw.jpg" alt="Indian Auto Rikshaw">
+      <div class="content">
+        <h2>Rikshaw</h2>
+        <p>
+          The auto-rikshaw, often called a “tuk-tuk,” is one of India’s most iconic modes of transport.
+          Colorful, quick, and efficient, it’s a symbol of urban mobility found in nearly every city.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Kissan Jam & Rikshaw Gallery • Made with ❤️</footer>
+
+  <script>
+    // Display current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
